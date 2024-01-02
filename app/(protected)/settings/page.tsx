@@ -4,7 +4,10 @@ export default async function SettingsPage() {
   const session = await auth();
 
   return (
-    <div>{JSON.stringify(session, null, 2)}
+    <div>
+      <pre>
+        {JSON.stringify(session, null, 2)}
+      </pre>
       <form action={async () => {
         "use server";
 
